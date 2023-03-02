@@ -12,13 +12,14 @@ namespace DeveloperSample.Container
 
     public class ContainerTest
     {
-        [Fact(Skip="Not implemented")]
+        [Fact]
         public void CanBindAndGetService()
         {
             var container = new Container();
-            container.Bind(typeof(IContainerTestInterface), typeof(ContainerTestClass));
+            container.Bind(interfaceType: typeof(IContainerTestInterface), implementationType: typeof(ContainerTestClass));
+
             var testInstance = container.Get<IContainerTestInterface>();
-            Assert.IsType<ContainerTestClass>(testInstance);
+            Assert.IsType<ContainerTestClass>(@object: testInstance);
         }
     }
 }

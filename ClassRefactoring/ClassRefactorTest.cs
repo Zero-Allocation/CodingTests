@@ -5,37 +5,33 @@ namespace DeveloperSample.ClassRefactoring
     public class ClassRefactorTest
     {
         [Fact]
-        public void AfricanSwallowHasCorrectSpeed()
+        public void AfricanSparrowHasCorrectSpeed()
         {
-            var swallowFactory = new SwallowFactory();
-            var swallow = swallowFactory.GetSwallow(SwallowType.African);
-            Assert.Equal(22, swallow.GetAirspeedVelocity());
+            var sparrow = SparrowFactory.GetSparrow(sparrowType: SparrowType.African);
+            Assert.Equal(expected: 22, actual: sparrow.GetAirspeedVelocity());
         }
 
         [Fact]
-        public void LadenAfricanSwallowHasCorrectSpeed()
+        public void LadenAfricanSparrowHasCorrectSpeed()
         {
-            var swallowFactory = new SwallowFactory();
-            var swallow = swallowFactory.GetSwallow(SwallowType.African);
-            swallow.ApplyLoad(SwallowLoad.Coconut);
-            Assert.Equal(18, swallow.GetAirspeedVelocity());
+            var sparrow = SparrowFactory.GetSparrow(sparrowType: SparrowType.African);
+            sparrow.ApplyLoad(load: SparrowLoad.Coconut);
+            Assert.Equal(expected: 18, actual: sparrow.GetAirspeedVelocity());
         }
 
         [Fact]
-        public void EuropeanSwallowHasCorrectSpeed()
+        public void EuropeanSparrowHasCorrectSpeed()
         {
-            var swallowFactory = new SwallowFactory();
-            var swallow = swallowFactory.GetSwallow(SwallowType.European);
-            Assert.Equal(20, swallow.GetAirspeedVelocity());
+            var sparrow = SparrowFactory.GetSparrow(sparrowType: SparrowType.European);
+            Assert.Equal(expected: 20, actual: sparrow.GetAirspeedVelocity());
         }
 
         [Fact]
-        public void LadenEuropeanSwallowHasCorrectSpeed()
+        public void LadenEuropeanSparrowHasCorrectSpeed()
         {
-            var swallowFactory = new SwallowFactory();
-            var swallow = swallowFactory.GetSwallow(SwallowType.European);
-            swallow.ApplyLoad(SwallowLoad.Coconut);
-            Assert.Equal(16, swallow.GetAirspeedVelocity());
+            var sparrow = SparrowFactory.GetSparrow(sparrowType: SparrowType.European);
+            sparrow.ApplyLoad(load: SparrowLoad.Coconut);
+            Assert.Equal(expected: 16, actual: sparrow.GetAirspeedVelocity());
         }
     }
 }

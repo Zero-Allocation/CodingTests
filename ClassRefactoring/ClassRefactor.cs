@@ -2,55 +2,49 @@ using System;
 
 namespace DeveloperSample.ClassRefactoring
 {
-    public enum SwallowType
+    public enum SparrowType
     {
         African, European
     }
 
-    public enum SwallowLoad
+    public enum SparrowLoad
     {
         None, Coconut
     }
 
-    public class SwallowFactory
+    /// <summary>
+    /// Creates a new Sparrow.
+    /// </summary>
+    /// <remarks>
+    /// CA1822: Mark members as static
+    /// </remarks>>
+    public static class SparrowFactory
     {
-        public Swallow GetSwallow(SwallowType swallowType) => new Swallow(swallowType);
+        public static Sparrow GetSparrow(SparrowType sparrowType) =>
+            new(sparrowType: sparrowType);
     }
 
-    public class Swallow
+    public class Sparrow
     {
-        public SwallowType Type { get; }
-        public SwallowLoad Load { get; private set; }
+        public SparrowType Type { get; }
 
-        public Swallow(SwallowType swallowType)
-        {
-            Type = swallowType;
-        }
+        public SparrowLoad Load { get; private set; }
 
-        public void ApplyLoad(SwallowLoad load)
-        {
-            Load = load;
-        }
+        public Sparrow(SparrowType sparrowType) => Type = sparrowType;
 
-        public double GetAirspeedVelocity()
-        {
-            if (Type == SwallowType.African && Load == SwallowLoad.None)
+        public void ApplyLoad(SparrowLoad load) => Load = load;
+
+        public double GetAirspeedVelocity() =>
+            Type switch
             {
-                return 22;
-            }
-            if (Type == SwallowType.African && Load == SwallowLoad.Coconut)
-            {
-                return 18;
-            }
-            if (Type == SwallowType.European && Load == SwallowLoad.None)
-            {
-                return 20;
-            }
-            if (Type == SwallowType.European && Load == SwallowLoad.Coconut)
-            {
-                return 16;
-            }
-            throw new InvalidOperationException();
-        }
+                // African
+                SparrowType.African when Load == SparrowLoad.None => 22,
+                SparrowType.African when Load == SparrowLoad.Coconut => 18,
+
+                // European
+                SparrowType.European when Load == SparrowLoad.None => 20,
+                SparrowType.European when Load == SparrowLoad.Coconut => 16,
+                _ => throw new InvalidOperationException()
+            };
     }
 }

@@ -11,24 +11,24 @@ namespace DeveloperSample.Syncing
         {
             var debug = new SyncDebug();
             var items = new List<string> { "one", "two" };
-            var result = debug.InitializeList(items);
-            Assert.Equal(items.Count, result.Count);
+            var result = debug.InitializeList(items: items);
+            Assert.Equal(expected: items.Count, actual: result.Count);
         }
 
-        [Fact(Skip="Not implemented")]
+        [Fact(Skip = "Not implemented")]
         public void ItemsOnlyInitializeOnce()
         {
             var debug = new SyncDebug();
             var count = 0;
-            var dictionary = debug.InitializeDictionary(i =>
+            var dictionary = debug.InitializeDictionary(getItem: i =>
             {
-                Thread.Sleep(1);
-                Interlocked.Increment(ref count);
+                Thread.Sleep(millisecondsTimeout: 1);
+                Interlocked.Increment(location: ref count);
                 return i.ToString();
             });
 
-            Assert.Equal(100, count);
-            Assert.Equal(100, dictionary.Count);
+            Assert.Equal(expected: 100, actual: count);
+            Assert.Equal(expected: 100, actual: dictionary.Count);
         }
     }
 }
