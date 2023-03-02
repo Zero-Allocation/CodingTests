@@ -7,20 +7,32 @@ namespace DeveloperSample.Syncing
     public class SyncTest
     {
         [Fact]
-        public void CanInitializeCollection()
+        public void CanInitializeCollectionParallel()
         {
-            var debug = new SyncDebug();
+            // CA1822
             var items = new List<string> { "one", "two" };
-            var result = debug.InitializeList(items: items);
+            var result = SyncDebug.InitializeListParallel(items: items);
             Assert.Equal(expected: items.Count, actual: result.Count);
         }
 
-        [Fact(Skip = "Not implemented")]
+        [Fact]
+        public void CanInitializeCollectionTpl()
+        {
+            // CA1822
+            var items = new List<string> { "one", "two" };
+
+            // Using .Result forces execution to wait until the method finishes.
+            var result = SyncDebug.InitializeListAsync(items: items).Result;
+
+            Assert.Equal(expected: items.Count, actual: result.Count);
+        }
+
+        [Fact]
         public void ItemsOnlyInitializeOnce()
         {
-            var debug = new SyncDebug();
+            // CA1822
             var count = 0;
-            var dictionary = debug.InitializeDictionary(getItem: i =>
+            var dictionary = SyncDebug.InitializeDictionary(getItem: i =>
             {
                 Thread.Sleep(millisecondsTimeout: 1);
                 Interlocked.Increment(location: ref count);

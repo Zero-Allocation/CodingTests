@@ -21,9 +21,9 @@ namespace DeveloperSample.Algorithms
             var spanCommaSeparatedItems = spanItems[..(items.Length - 1)];
 
             using var zBuilder = ZString.CreateStringBuilder();
-            zBuilder.AppendJoin(", ", spanCommaSeparatedItems);
-            zBuilder.Append(" and ");
-            zBuilder.Append(items[^1]);
+            zBuilder.AppendJoin(separator: ", ", values: spanCommaSeparatedItems);
+            zBuilder.Append(value: " and ");
+            zBuilder.Append(value: items[^1]);
 
             return zBuilder.ToString();
         }
@@ -39,9 +39,9 @@ namespace DeveloperSample.Algorithms
         /// <returns></returns>
         public static BigInteger GetBigFactorial(int n)
         {
-            var fact = Trampoline.MakeTrampoline<int, BigInteger, BigInteger>(Bounce.Factorial);
+            var fact = Trampoline.MakeTrampoline<int, BigInteger, BigInteger>(function: Bounce.Factorial);
 
-            return fact(n, 1);
+            return fact(arg1: n, arg2: 1);
         }
 
         /// <summary>

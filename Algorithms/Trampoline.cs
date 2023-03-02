@@ -50,7 +50,7 @@ namespace DeveloperSample.Algorithms
 
                 while (true)
                 {
-                    var result = function(currentArg1, currentArg2);
+                    var result = function(arg1: currentArg1, arg2: currentArg2);
 
                     if (result.HasResult) return result.Result;
 
@@ -62,8 +62,8 @@ namespace DeveloperSample.Algorithms
             return Trampolined;
         }
 
-        public static Bounce<T1, T2, TResult> Recurse<T1, T2, TResult>(T1 arg1, T2 arg2) => new(arg1, arg2);
+        public static Bounce<T1, T2, TResult> Recurse<T1, T2, TResult>(T1 arg1, T2 arg2) => new(param1: arg1, param2: arg2);
 
-        public static Bounce<T1, T2, TResult> ReturnResult<T1, T2, TResult>(TResult result) => new(result);
+        public static Bounce<T1, T2, TResult> ReturnResult<T1, T2, TResult>(TResult result) => new(result: result);
     }
 }

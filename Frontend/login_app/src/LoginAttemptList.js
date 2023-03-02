@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./LoginAttemptList.css";
 
 const LoginAttemptList = (props) => {
@@ -8,7 +8,7 @@ const LoginAttemptList = (props) => {
 
     const handleChange = (event) => {
         const value = event.target.value;
-        setLocalState({...localState, [event.target.name]: value});
+        setLocalState({ ...localState, [event.target.name]: value });
     }
 
     const loginAttempts = props.attempts.map((attempt) => {
