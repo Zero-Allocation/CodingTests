@@ -18,7 +18,12 @@
     min-height: 10vh;
     display: flex;
     flex-direction: column;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -webkit-align-items: center;
     align-items: center;
+    -o-justify-content: center;
+    -webkit-justify-content: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
@@ -29,11 +34,18 @@
 }
 
 @keyframes App-logo-spin {
+    /* ReSharper disable once CssBrowserCompatibility */
+    /* transform */
     from {
-        transform: rotate(0deg);
+        -ms-transform: rotate(0);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
     }
-
+    /* ReSharper disable once CssBrowserCompatibility */
+    /* transform */
     to {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }

@@ -5,8 +5,8 @@ namespace DeveloperSample.Algorithms
     /// <summary>
     /// Tail Recursion in C#.
     /// </summary>
-    /// <see cref="https://thomaslevesque.com/2011/09/02/tail-recursion-in-c/"/>
-    /// <see cref="http://blog.functionalfun.net/2008/04/bouncing-on-your-tail.html"/>
+    /// <seealso cref="http://thomaslevesque.com/2011/09/02/tail-recursion-in-c/"/>
+    /// <seealso cref="http://blog.functionalfun.net/2008/04/bouncing-on-your-tail.html"/>
     /// <typeparam name="T1"></typeparam>
     /// <typeparam name="T2"></typeparam>
     /// <typeparam name="TResult"></typeparam>
@@ -37,7 +37,7 @@ namespace DeveloperSample.Algorithms
     /// <summary>
     /// Tail Recursion in C#.
     /// </summary>
-    /// <see cref="https://thomaslevesque.com/2011/09/02/tail-recursion-in-c/"/>
+    /// <see cref="http://thomaslevesque.com/2011/09/02/tail-recursion-in-c/"/>
     /// <see cref="http://blog.functionalfun.net/2008/04/bouncing-on-your-tail.html"/>
     public static class Trampoline
     {

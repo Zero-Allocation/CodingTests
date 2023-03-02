@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=330F04B5_002D0465_002D4603_002DBD77_002DC3DA46DA0E13_002Fd_003AFrontend_002Fd_003Alogin_005Fapp_002Fd_003Abuild/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:Boolean x:Key="/Default/Environment/SearchAndNavigation/FileAndDirsToSkip/=330F04B5_002D0465_002D4603_002DBD77_002DC3DA46DA0E13_002Fd_003AFrontend_002Fd_003Alogin_005Fapp_002Fd_003Abuild_002Fd_003Astatic/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/SearchAndNavigation/FileAndDirsToSkip/=330F04B5_002D0465_002D4603_002DBD77_002DC3DA46DA0E13_002Fd_003AFrontend_002Fd_003Alogin_005Fapp_002Fd_003Abuild_002Fd_003Astatic_002Fd_003Acss/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/SearchAndNavigation/FileAndDirsToSkip/=330F04B5_002D0465_002D4603_002DBD77_002DC3DA46DA0E13_002Fd_003AFrontend_002Fd_003Alogin_005Fapp_002Fd_003Abuild_002Fd_003Astatic_002Fd_003Ajs/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/SearchAndNavigation/FileAndDirsToSkip/=_002E_002E_005CFrontend_005Clogin_005Fapp_005Cnode_005Fmodules/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=analytics/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=CORDIC/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=webfonts/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

@@ -1,8 +1,16 @@
-.Attempt-List-Main {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 25vw;
-    padding: 0 2em;
+.Attempt-Table {
+    margin-left: auto;
+    margin-right: auto;
+}
+.Attempt-Table-Body {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Attempt-Table-Login {
+    width: 30%
+}
+
+.Attempt-Table-CurrentDateTime {
+    width: 70%
 }

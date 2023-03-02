@@ -2,7 +2,13 @@
     margin: auto;
     display: flex;
     flex-direction: column;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -webkit-align-items: center;
     align-items: center;
+    -moz-align-content: center;
+    -o-align-content: center;
+    -webkit-align-content: center;
     align-content: center;
     max-width: 25vw;
     background-color: lightgray;
